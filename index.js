@@ -207,7 +207,7 @@ app.delete('/deletePlan/:bid/:title', (req, res) => {
         { _id: req.params.bid },
         {
             $pull: {
-                plans: { title:req.params.title },
+                plans: { title: req.params.title },
             },
         }
     ).then((business) => {
@@ -239,7 +239,7 @@ app.delete('/deleteService/:bid/:title', (req, res) => {
         { _id: req.params.bid },
         {
             $pull: {
-                services: { title:req.params.title },
+                services: { title: req.params.title },
             },
         }
     ).then((business) => {
@@ -250,7 +250,7 @@ app.delete('/deleteService/:bid/:title', (req, res) => {
 
 
 
-app.listen(4600, () => {
-    console.log('running at 4600')
-}
-);
+const port = parseInt(process.env.PORT) || 8080;
+app.listen(port, () => {
+    console.log(`helloworld: listening on port ${port}`);
+});
