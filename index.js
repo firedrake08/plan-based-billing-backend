@@ -64,6 +64,8 @@ app.post('/getCustomer', (req, res) => {
     })
 })
 
+
+
 app.patch('/createPassword/:mobile', (req, res) => {
     Customer.findOneAndUpdate(
         { mobile: req.params.mobile },
@@ -73,6 +75,8 @@ app.patch('/createPassword/:mobile', (req, res) => {
         res.json(customer);
     })
 })
+
+
 
 app.patch('/updateCustomerDetails/:mobile', (req, res) => {
     Customer.findOneAndUpdate(
