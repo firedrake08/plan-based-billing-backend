@@ -9,7 +9,8 @@ var app = express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-mongoose.connect('mongodb+srv://infoedupoly:edupoly83@cluster0.eitlw5l.mongodb.net/plan-based-billing');
+mongoose.connect('mongodb+srv://dhritimantamulisaikia:dts.19@cluster0.zhfhvtf.mongodb.net/plan-based-billing');
+
 
 app.post('/addBusinessAccount', (req, res) => {
     let newBusinessAccount = new Businessaccount(req.body);
